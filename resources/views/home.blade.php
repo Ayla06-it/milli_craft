@@ -10,7 +10,7 @@ Home
 
 <article>
 
-    <div class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque voluptas rem obcaecati
+    <div class="text-2xl py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque voluptas rem obcaecati
         voluptatibus aut alias minus consequuntur. Praesentium deserunt eligendi mollitia aut! Itaque temporibus velit
         est, nostrum tempora dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quis deleniti
         placeat voluptates quam laboriosam suscipit quae ea molestiae sunt? Assumenda consequuntur beatae laboriosam cum
@@ -28,7 +28,7 @@ Home
 <div>
     <div class="grid grid-cols-2 gap-4 text-2xl ">
         @foreach ($users as $user)
-        <div class="shadow-xl p-6 m-6 rounded-2xl bg-green-300 hover:bg-green-400 inset-shadow-sm inset-shadow-green-500">
+        <div class="shadow-xl p-6 m-6 rounded-2xl bg-[#D9826B] hover:bg-[#C06349] inset-shadow-sm inset:#A64B32">
 
             <div>
                 <b>id:</b> {{$user->id}}
@@ -43,7 +43,7 @@ Home
             </div>
 
             <div>
-                <b class="text-green-700 h">Age: </b> {{$user->age}}
+                <b>Age: </b> {{$user->age}}
             </div>
         </div>
         @endforeach

@@ -1,13 +1,20 @@
 <?php
 
-use App\Http\Controllers\CarController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\YakaController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Models\Yaka;
 
 Route::get('/', function(){
     $users = User::all();
     return view('home', compact('users'));
+});
+
+Route::get('/shop', function(){
+    $yakas = Yaka::all();
+    return view('shop', compact('yakas'));
 });
 
 
@@ -33,3 +40,4 @@ Route::fallback(function(){
 });
 
 Route::get('/', [UserController::class, 'index'])->name('home');
+Route::get('/shop', [GalleryController::class, 'showImages'])->name('shop');

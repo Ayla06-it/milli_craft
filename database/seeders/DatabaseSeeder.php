@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Yaka;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,7 +17,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Car::factory(10)->create();
-        User::factory(100)->create();
+        User::factory(50)->create();
+
+        Yaka::factory(50)->create();
 
         // User::factory()->create([
         //     'name' => 'Test User',
