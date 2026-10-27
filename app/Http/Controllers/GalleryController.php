@@ -10,12 +10,12 @@ use App\Models\Yaka;
 class GalleryController extends Controller
 {
     public function showImages(){
-        $directory = public_path('storage/Images');
+        $directory = public_path('Images');
         $files = File::files($directory);
 
         $images = [];
         foreach($files as $file){
-            $images[] = asset('storage/Images/' . $file->getFilename());
+            $images[] = asset('Images/' . $file->getFilename());
         }
         $yakas=Yaka::all();
 
