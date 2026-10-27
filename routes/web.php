@@ -5,16 +5,11 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
-//Route::get('/', function(){
-  //  $users = User::all();
-   // return view('home', compact('users'));
-//});
+Route::get('/', function(){
+    $users = User::all();
+    return view('home', compact('users'));
+});
 
-
-//Route::get('/', [UserController::class, 'index'])->name('home');
-
-
-//Route::get('/car', [CarController::class, 'index'])->name('car');
 
 Route::get('/', function(){
     return view('home');
@@ -36,3 +31,5 @@ Route::get('/contact', function () {
 Route::fallback(function(){
     return 'You are lost!';
 });
+
+Route::get('/', [UserController::class, 'index'])->name('home');

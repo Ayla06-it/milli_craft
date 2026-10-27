@@ -9,8 +9,7 @@ Home
 @section('content')
 
 <article>
-    <img class="float-left w-64 h-48 object-cover rounded-2xl hover:shadow-2xl mr-12 my-3"
-        src="{{ asset('images/mountain.avif') }}" />
+
     <div class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque voluptas rem obcaecati
         voluptatibus aut alias minus consequuntur. Praesentium deserunt eligendi mollitia aut! Itaque temporibus velit
         est, nostrum tempora dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quis deleniti
@@ -24,6 +23,30 @@ Home
 <div class="flex justify-between text-2xl mx-6 py-4 border border-gray-400 rounded-2xl">
     <div>
         Bizin ulanyjylarymyz:
+    </div>
+</div>
+<div>
+    <div class="grid grid-cols-2 gap-4 text-2xl ">
+        @foreach ($users as $user)
+        <div class="shadow-xl p-6 m-6 rounded-2xl bg-green-300 hover:bg-green-400 inset-shadow-sm inset-shadow-green-500">
+
+            <div>
+                <b>id:</b> {{$user->id}}
+            </div>
+
+            <div>
+                <b>Name:</b> {{$user->name}}
+            </div>
+
+            <div>
+                <b>email:</b> {{$user->email}}
+            </div>
+
+            <div>
+                <b class="text-green-700 h">Age: </b> {{$user->age}}
+            </div>
+        </div>
+        @endforeach
     </div>
 </div>
 
